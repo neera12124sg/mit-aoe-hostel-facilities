@@ -18,7 +18,7 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Change this line */
     gap: 20px;
 }
 
@@ -37,14 +37,17 @@ header {
 
 .gallery {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap; /* Change this line */
+    justify-content: center; /* Change this line */
     margin: 20px;
 }
 
 .gallery img {
-    width: 200px;
+    width: 100%; /* Change this line */
     height: auto;
+    max-width: 200px; /* Add this line */
     border-radius: 8px;
+    margin: 10px; /* Add this line for spacing */
 }
 
 .modal {
